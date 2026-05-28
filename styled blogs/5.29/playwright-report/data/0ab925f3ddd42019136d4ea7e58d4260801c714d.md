@@ -1,0 +1,1713 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: blog_app.spec.js >> Blog app >> When logged in >> blogs are ordered by likes with most liked first
+- Location: tests\blog_app.spec.js:39:8
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-testid="blog"]').filter({ hasText: 'second blog' }).getByRole('button', { name: 'like' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - heading "blogs" [level=2] [ref=e4]
+  - generic [ref=e5]:
+    - paragraph [ref=e6]:
+      - text: Test User logged in
+      - button "logout" [ref=e7]
+    - button "new blog" [ref=e10]
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - text: sort_test_c sort_author
+        - button "hide" [ref=e14]
+      - generic [ref=e15]: http://example.com/c
+      - generic [ref=e16]:
+        - text: likes 3
+        - button "like" [ref=e17]
+      - generic [ref=e18]: Test User
+      - button "remove" [ref=e19]
+    - generic [ref=e21]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e22]
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - text: sort_test_c sort_author
+        - button "hide" [ref=e26]
+      - generic [ref=e27]: http://example.com/c
+      - generic [ref=e28]:
+        - text: likes 3
+        - button "like" [ref=e29]
+      - generic [ref=e30]: Test User
+      - button "remove" [ref=e31]
+    - generic [ref=e33]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e34]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - text: sort_test_c sort_author
+        - button "hide" [ref=e38]
+      - generic [ref=e39]: http://example.com/c
+      - generic [ref=e40]:
+        - text: likes 3
+        - button "like" [ref=e41]
+      - generic [ref=e42]: Test User
+      - button "remove" [ref=e43]
+    - generic [ref=e45]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e46]
+    - generic [ref=e48]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e49]
+    - generic [ref=e51]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e52]
+    - generic [ref=e54]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e55]
+    - generic [ref=e57]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e58]
+    - generic [ref=e60]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e61]
+    - generic [ref=e63]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e64]
+    - generic [ref=e66]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e67]
+    - generic [ref=e69]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e70]
+    - generic [ref=e72]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e73]
+    - generic [ref=e75]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e76]
+    - generic [ref=e78]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e79]
+    - generic [ref=e81]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e82]
+    - generic [ref=e84]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e85]
+    - generic [ref=e87]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e88]
+    - generic [ref=e90]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e91]
+    - generic [ref=e93]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e94]
+    - generic [ref=e96]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e97]
+    - generic [ref=e99]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e100]
+    - generic [ref=e102]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e103]
+    - generic [ref=e105]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e106]
+    - generic [ref=e108]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e109]
+    - generic [ref=e111]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e112]
+    - generic [ref=e114]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e115]
+    - generic [ref=e117]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e118]
+    - generic [ref=e120]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e121]
+    - generic [ref=e123]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e124]
+    - generic [ref=e126]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e127]
+    - generic [ref=e129]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e130]
+    - generic [ref=e132]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e133]
+    - generic [ref=e135]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e136]
+    - generic [ref=e138]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e139]
+    - generic [ref=e141]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e142]
+    - generic [ref=e144]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e145]
+    - generic [ref=e147]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e148]
+    - generic [ref=e150]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e151]
+    - generic [ref=e153]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e154]
+    - generic [ref=e156]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e157]
+    - generic [ref=e159]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e160]
+    - generic [ref=e162]:
+      - text: blog to like playwright
+      - button "view" [ref=e163]
+    - generic [ref=e165]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e166]
+    - generic [ref=e168]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e169]
+    - generic [ref=e171]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e172]
+    - generic [ref=e174]:
+      - text: blog to like playwright
+      - button "view" [ref=e175]
+    - generic [ref=e177]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e178]
+    - generic [ref=e180]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e181]
+    - generic [ref=e183]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e184]
+    - generic [ref=e186]:
+      - text: blog to like playwright
+      - button "view" [ref=e187]
+    - generic [ref=e189]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e190]
+    - generic [ref=e192]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e193]
+    - generic [ref=e195]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e196]
+    - generic [ref=e198]:
+      - text: blog to like playwright
+      - button "view" [ref=e199]
+    - generic [ref=e201]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e202]
+    - generic [ref=e204]:
+      - text: creator blog playwright
+      - button "view" [ref=e205]
+    - generic [ref=e207]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e208]
+    - generic [ref=e210]:
+      - text: blog to like playwright
+      - button "view" [ref=e211]
+    - generic [ref=e213]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e214]
+    - generic [ref=e216]:
+      - text: creator blog playwright
+      - button "view" [ref=e217]
+    - generic [ref=e219]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e220]
+    - generic [ref=e222]:
+      - text: blog to like playwright
+      - button "view" [ref=e223]
+    - generic [ref=e225]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e226]
+    - generic [ref=e228]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e229]
+    - generic [ref=e231]:
+      - text: blog to like playwright
+      - button "view" [ref=e232]
+    - generic [ref=e234]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e235]
+    - generic [ref=e237]:
+      - text: creator blog playwright
+      - button "view" [ref=e238]
+    - generic [ref=e240]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e241]
+    - generic [ref=e243]:
+      - text: blog to like playwright
+      - button "view" [ref=e244]
+    - generic [ref=e246]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e247]
+    - generic [ref=e249]:
+      - text: creator blog playwright
+      - button "view" [ref=e250]
+    - generic [ref=e252]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e253]
+    - generic [ref=e255]:
+      - text: blog to like playwright
+      - button "view" [ref=e256]
+    - generic [ref=e258]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e259]
+    - generic [ref=e261]:
+      - text: creator blog playwright
+      - button "view" [ref=e262]
+    - generic [ref=e264]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e265]
+    - generic [ref=e267]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e268]
+    - generic [ref=e270]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e271]
+    - generic [ref=e273]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e274]
+    - generic [ref=e276]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e277]
+    - generic [ref=e279]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e280]
+    - generic [ref=e282]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e283]
+    - generic [ref=e285]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e286]
+    - generic [ref=e288]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e289]
+    - generic [ref=e291]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e292]
+    - generic [ref=e294]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e295]
+    - generic [ref=e297]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e298]
+    - generic [ref=e300]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e301]
+    - generic [ref=e303]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e304]
+    - generic [ref=e306]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e307]
+    - generic [ref=e309]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e310]
+    - generic [ref=e312]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e313]
+    - generic [ref=e315]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e316]
+    - generic [ref=e318]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e319]
+    - generic [ref=e321]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e322]
+    - generic [ref=e324]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e325]
+    - generic [ref=e327]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e328]
+    - generic [ref=e330]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e331]
+    - generic [ref=e333]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e334]
+    - generic [ref=e336]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e337]
+    - generic [ref=e339]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e340]
+    - generic [ref=e342]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e343]
+    - generic [ref=e345]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e346]
+    - generic [ref=e348]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e349]
+    - generic [ref=e351]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e352]
+    - generic [ref=e354]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e355]
+    - generic [ref=e357]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e358]
+    - generic [ref=e360]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e361]
+    - generic [ref=e363]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e364]
+    - generic [ref=e366]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e367]
+    - generic [ref=e369]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e370]
+    - generic [ref=e372]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e373]
+    - generic [ref=e375]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e376]
+    - generic [ref=e378]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e379]
+    - generic [ref=e381]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e382]
+    - generic [ref=e384]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e385]
+    - generic [ref=e387]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e388]
+    - generic [ref=e390]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e391]
+    - generic [ref=e393]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e394]
+    - generic [ref=e396]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e397]
+    - generic [ref=e399]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e400]
+    - generic [ref=e402]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e403]
+    - generic [ref=e405]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e406]
+    - generic [ref=e408]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e409]
+    - generic [ref=e411]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e412]
+    - generic [ref=e414]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e415]
+    - generic [ref=e417]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e418]
+    - generic [ref=e420]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e421]
+    - generic [ref=e423]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e424]
+    - generic [ref=e426]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e427]
+    - generic [ref=e429]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e430]
+    - generic [ref=e432]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e433]
+    - generic [ref=e435]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e436]
+    - generic [ref=e438]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e439]
+    - generic [ref=e441]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e442]
+    - generic [ref=e444]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e445]
+    - generic [ref=e447]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e448]
+    - generic [ref=e450]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e451]
+    - generic [ref=e453]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e454]
+    - generic [ref=e456]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e457]
+    - generic [ref=e459]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e460]
+    - generic [ref=e462]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e463]
+    - generic [ref=e465]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e466]
+    - generic [ref=e468]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e469]
+    - generic [ref=e471]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e472]
+    - generic [ref=e474]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e475]
+    - generic [ref=e477]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e478]
+    - generic [ref=e480]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e481]
+    - generic [ref=e483]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e484]
+    - generic [ref=e486]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e487]
+    - generic [ref=e489]:
+      - text: Blog A author
+      - button "view" [ref=e490]
+    - generic [ref=e492]:
+      - text: Blog B author
+      - button "view" [ref=e493]
+    - generic [ref=e495]:
+      - text: Blog C author
+      - button "view" [ref=e496]
+    - generic [ref=e498]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e499]
+    - generic [ref=e501]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e502]
+    - generic [ref=e504]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e505]
+    - generic [ref=e507]:
+      - text: Blog A author
+      - button "view" [ref=e508]
+    - generic [ref=e510]:
+      - text: Blog B author
+      - button "view" [ref=e511]
+    - generic [ref=e513]:
+      - text: Blog C author
+      - button "view" [ref=e514]
+    - generic [ref=e516]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e517]
+    - generic [ref=e519]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e520]
+    - generic [ref=e522]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e523]
+    - generic [ref=e525]:
+      - text: Blog A author
+      - button "view" [ref=e526]
+    - generic [ref=e528]:
+      - text: Blog B author
+      - button "view" [ref=e529]
+    - generic [ref=e531]:
+      - text: Blog C author
+      - button "view" [ref=e532]
+    - generic [ref=e534]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e535]
+    - generic [ref=e537]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e538]
+    - generic [ref=e540]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e541]
+    - generic [ref=e543]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e544]
+    - generic [ref=e546]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e547]
+    - generic [ref=e549]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e550]
+    - generic [ref=e552]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e553]
+    - generic [ref=e555]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e556]
+    - generic [ref=e558]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e559]
+    - generic [ref=e561]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e562]
+    - generic [ref=e564]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e565]
+    - generic [ref=e567]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e568]
+    - generic [ref=e570]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e571]
+    - generic [ref=e573]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e574]
+    - generic [ref=e576]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e577]
+    - generic [ref=e579]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e580]
+    - generic [ref=e582]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e583]
+    - generic [ref=e585]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e586]
+    - generic [ref=e588]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e589]
+    - generic [ref=e591]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e592]
+    - generic [ref=e594]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e595]
+    - generic [ref=e597]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e598]
+    - generic [ref=e600]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e601]
+    - generic [ref=e603]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e604]
+    - generic [ref=e606]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e607]
+    - generic [ref=e609]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e610]
+    - generic [ref=e612]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e613]
+    - generic [ref=e615]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e616]
+    - generic [ref=e618]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e619]
+    - generic [ref=e621]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e622]
+    - generic [ref=e624]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e625]
+    - generic [ref=e627]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e628]
+    - generic [ref=e630]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e631]
+    - generic [ref=e633]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e634]
+    - generic [ref=e636]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e637]
+    - generic [ref=e639]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e640]
+    - generic [ref=e642]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e643]
+    - generic [ref=e645]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e646]
+    - generic [ref=e648]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e649]
+    - generic [ref=e651]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e652]
+    - generic [ref=e654]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e655]
+    - generic [ref=e657]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e658]
+    - generic [ref=e660]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e661]
+    - generic [ref=e663]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e664]
+    - generic [ref=e666]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e667]
+    - generic [ref=e669]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e670]
+    - generic [ref=e672]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e673]
+    - generic [ref=e675]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e676]
+    - generic [ref=e678]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e679]
+    - generic [ref=e681]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e682]
+    - generic [ref=e684]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e685]
+    - generic [ref=e687]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e688]
+    - generic [ref=e690]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e691]
+    - generic [ref=e693]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e694]
+    - generic [ref=e696]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e697]
+    - generic [ref=e699]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e700]
+    - generic [ref=e702]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e703]
+    - generic [ref=e705]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e706]
+    - generic [ref=e708]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e709]
+    - generic [ref=e711]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e712]
+    - generic [ref=e714]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e715]
+    - generic [ref=e717]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e718]
+    - generic [ref=e720]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e721]
+    - generic [ref=e723]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e724]
+    - generic [ref=e726]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e727]
+    - generic [ref=e729]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e730]
+    - generic [ref=e732]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e733]
+    - generic [ref=e735]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e736]
+    - generic [ref=e738]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e739]
+    - generic [ref=e741]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e742]
+    - generic [ref=e744]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e745]
+    - generic [ref=e747]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e748]
+    - generic [ref=e750]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e751]
+    - generic [ref=e753]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e754]
+    - generic [ref=e756]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e757]
+    - generic [ref=e759]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e760]
+    - generic [ref=e762]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e763]
+    - generic [ref=e765]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e766]
+    - generic [ref=e768]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e769]
+    - generic [ref=e771]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e772]
+    - generic [ref=e774]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e775]
+    - generic [ref=e777]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e778]
+    - generic [ref=e780]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e781]
+    - generic [ref=e783]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e784]
+    - generic [ref=e786]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e787]
+    - generic [ref=e789]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e790]
+    - generic [ref=e792]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e793]
+    - generic [ref=e795]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e796]
+    - generic [ref=e798]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e799]
+    - generic [ref=e801]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e802]
+    - generic [ref=e804]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e805]
+    - generic [ref=e807]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e808]
+    - generic [ref=e810]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e811]
+    - generic [ref=e813]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e814]
+    - generic [ref=e816]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e817]
+    - generic [ref=e819]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e820]
+    - generic [ref=e822]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e823]
+    - generic [ref=e825]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e826]
+    - generic [ref=e828]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e829]
+    - generic [ref=e831]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e832]
+    - generic [ref=e834]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e835]
+    - generic [ref=e837]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e838]
+    - generic [ref=e840]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e841]
+    - generic [ref=e843]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e844]
+    - generic [ref=e846]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e847]
+    - generic [ref=e849]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e850]
+    - generic [ref=e852]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e853]
+    - generic [ref=e855]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e856]
+    - generic [ref=e858]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e859]
+    - generic [ref=e861]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e862]
+    - generic [ref=e864]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e865]
+    - generic [ref=e867]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e868]
+    - generic [ref=e870]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e871]
+    - generic [ref=e873]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e874]
+    - generic [ref=e876]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e877]
+    - generic [ref=e879]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e880]
+    - generic [ref=e882]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e883]
+    - generic [ref=e885]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e886]
+    - generic [ref=e888]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e889]
+    - generic [ref=e891]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e892]
+    - generic [ref=e894]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e895]
+    - generic [ref=e897]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e898]
+    - generic [ref=e900]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e901]
+    - generic [ref=e903]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e904]
+    - generic [ref=e906]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e907]
+    - generic [ref=e909]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e910]
+    - generic [ref=e912]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e913]
+    - generic [ref=e915]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e916]
+    - generic [ref=e918]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e919]
+    - generic [ref=e921]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e922]
+    - generic [ref=e924]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e925]
+    - generic [ref=e927]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e928]
+    - generic [ref=e930]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e931]
+    - generic [ref=e933]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e934]
+    - generic [ref=e936]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e937]
+    - generic [ref=e939]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e940]
+    - generic [ref=e942]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e943]
+    - generic [ref=e945]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e946]
+    - generic [ref=e948]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e949]
+    - generic [ref=e951]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e952]
+    - generic [ref=e954]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e955]
+    - generic [ref=e957]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e958]
+    - generic [ref=e960]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e961]
+    - generic [ref=e963]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e964]
+    - generic [ref=e966]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e967]
+    - generic [ref=e969]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e970]
+    - generic [ref=e972]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e973]
+    - generic [ref=e975]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e976]
+    - generic [ref=e978]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e979]
+    - generic [ref=e981]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e982]
+    - generic [ref=e984]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e985]
+    - generic [ref=e987]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e988]
+    - generic [ref=e990]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e991]
+    - generic [ref=e993]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e994]
+    - generic [ref=e996]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e997]
+    - generic [ref=e999]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1000]
+    - generic [ref=e1002]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1003]
+    - generic [ref=e1005]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1006]
+    - generic [ref=e1008]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1009]
+    - generic [ref=e1011]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1012]
+    - generic [ref=e1014]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1015]
+    - generic [ref=e1017]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1018]
+    - generic [ref=e1020]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1021]
+    - generic [ref=e1023]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1024]
+    - generic [ref=e1026]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1027]
+    - generic [ref=e1029]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1030]
+    - generic [ref=e1032]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1033]
+    - generic [ref=e1035]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1036]
+    - generic [ref=e1038]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1039]
+    - generic [ref=e1041]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1042]
+    - generic [ref=e1044]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1045]
+    - generic [ref=e1047]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1048]
+    - generic [ref=e1050]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1051]
+    - generic [ref=e1053]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1054]
+    - generic [ref=e1056]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1057]
+    - generic [ref=e1059]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1060]
+    - generic [ref=e1062]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1063]
+    - generic [ref=e1065]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1066]
+    - generic [ref=e1068]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1069]
+    - generic [ref=e1071]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1072]
+    - generic [ref=e1074]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1075]
+    - generic [ref=e1077]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1078]
+    - generic [ref=e1080]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1081]
+    - generic [ref=e1083]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1084]
+    - generic [ref=e1086]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1087]
+    - generic [ref=e1089]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1090]
+    - generic [ref=e1092]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1093]
+    - generic [ref=e1095]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1096]
+    - generic [ref=e1098]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1099]
+    - generic [ref=e1101]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1102]
+    - generic [ref=e1104]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1105]
+    - generic [ref=e1107]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1108]
+    - generic [ref=e1110]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1111]
+    - generic [ref=e1113]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1114]
+    - generic [ref=e1116]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1117]
+    - generic [ref=e1119]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1120]
+    - generic [ref=e1122]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1123]
+    - generic [ref=e1125]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1126]
+    - generic [ref=e1128]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1129]
+    - generic [ref=e1131]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1132]
+    - generic [ref=e1134]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1135]
+    - generic [ref=e1137]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1138]
+    - generic [ref=e1140]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1141]
+    - generic [ref=e1143]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1144]
+    - generic [ref=e1146]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1147]
+    - generic [ref=e1149]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1150]
+    - generic [ref=e1152]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1153]
+    - generic [ref=e1155]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1156]
+    - generic [ref=e1158]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1159]
+    - generic [ref=e1161]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1162]
+    - generic [ref=e1164]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1165]
+    - generic [ref=e1167]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1168]
+    - generic [ref=e1170]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1171]
+    - generic [ref=e1173]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1174]
+    - generic [ref=e1176]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1177]
+    - generic [ref=e1179]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1180]
+    - generic [ref=e1182]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1183]
+    - generic [ref=e1185]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1186]
+    - generic [ref=e1188]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1189]
+    - generic [ref=e1191]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1192]
+    - generic [ref=e1194]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1195]
+    - generic [ref=e1197]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1198]
+    - generic [ref=e1200]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1201]
+    - generic [ref=e1203]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1204]
+    - generic [ref=e1206]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1207]
+    - generic [ref=e1209]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1210]
+    - generic [ref=e1212]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1213]
+    - generic [ref=e1215]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1216]
+    - generic [ref=e1218]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1219]
+    - generic [ref=e1221]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1222]
+    - generic [ref=e1224]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1225]
+    - generic [ref=e1227]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1228]
+    - generic [ref=e1230]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1231]
+    - generic [ref=e1233]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1234]
+    - generic [ref=e1236]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1237]
+    - generic [ref=e1239]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1240]
+    - generic [ref=e1242]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1243]
+    - generic [ref=e1245]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1246]
+    - generic [ref=e1248]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1249]
+    - generic [ref=e1251]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1252]
+    - generic [ref=e1254]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1255]
+    - generic [ref=e1257]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1258]
+    - generic [ref=e1260]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1261]
+    - generic [ref=e1263]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1264]
+    - generic [ref=e1266]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1267]
+    - generic [ref=e1269]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1270]
+    - generic [ref=e1272]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1273]
+    - generic [ref=e1275]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1276]
+    - generic [ref=e1278]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1279]
+    - generic [ref=e1281]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1282]
+    - generic [ref=e1284]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1285]
+    - generic [ref=e1287]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1288]
+    - generic [ref=e1290]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1291]
+    - generic [ref=e1293]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1294]
+    - generic [ref=e1296]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1297]
+    - generic [ref=e1299]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1300]
+    - generic [ref=e1302]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1303]
+    - generic [ref=e1305]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1306]
+    - generic [ref=e1308]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1309]
+    - generic [ref=e1311]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1312]
+    - generic [ref=e1314]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1315]
+    - generic [ref=e1317]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1318]
+    - generic [ref=e1320]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1321]
+    - generic [ref=e1323]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1324]
+    - generic [ref=e1326]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1327]
+    - generic [ref=e1329]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1330]
+    - generic [ref=e1332]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1333]
+    - generic [ref=e1335]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1336]
+    - generic [ref=e1338]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1339]
+    - generic [ref=e1341]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1342]
+    - generic [ref=e1344]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1345]
+    - generic [ref=e1347]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1348]
+    - generic [ref=e1350]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1351]
+    - generic [ref=e1353]:
+      - text: sort_test_a sort_author
+      - button "view" [ref=e1354]
+    - generic [ref=e1356]:
+      - text: sort_test_b sort_author
+      - button "view" [ref=e1357]
+    - generic [ref=e1359]:
+      - text: sort_test_c sort_author
+      - button "view" [ref=e1360]
+    - generic [ref=e1362]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1363]
+    - generic [ref=e1365]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1366]
+    - generic [ref=e1368]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1369]
+    - generic [ref=e1371]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1372]
+    - generic [ref=e1374]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1375]
+    - generic [ref=e1377]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1378]
+    - generic [ref=e1380]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1381]
+    - generic [ref=e1383]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1384]
+    - generic [ref=e1386]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1387]
+    - generic [ref=e1389]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1390]
+    - generic [ref=e1392]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1393]
+    - generic [ref=e1395]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1396]
+    - generic [ref=e1398]:
+      - text: first blog author1
+      - button "view" [ref=e1399]
+    - generic [ref=e1401]:
+      - text: second blog author2
+      - button "view" [ref=e1402]
+    - generic [ref=e1404]:
+      - text: third blog author3
+      - button "view" [ref=e1405]
+    - generic [ref=e1407]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1408]
+    - generic [ref=e1410]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1411]
+    - generic [ref=e1413]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1414]
+    - generic [ref=e1416]:
+      - text: first blog author1
+      - button "view" [ref=e1417]
+    - generic [ref=e1419]:
+      - text: second blog author2
+      - button "view" [ref=e1420]
+    - generic [ref=e1422]:
+      - text: third blog author3
+      - button "view" [ref=e1423]
+    - generic [ref=e1425]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1426]
+    - generic [ref=e1428]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1429]
+    - generic [ref=e1431]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1432]
+    - generic [ref=e1434]:
+      - text: first blog author1
+      - button "view" [ref=e1435]
+    - generic [ref=e1437]:
+      - text: second blog author2
+      - button "view" [ref=e1438]
+    - generic [ref=e1440]:
+      - text: third blog author3
+      - button "view" [ref=e1441]
+    - generic [ref=e1443]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1444]
+    - generic [ref=e1446]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1447]
+    - generic [ref=e1449]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1450]
+    - generic [ref=e1452]:
+      - text: first blog author1
+      - button "view" [ref=e1453]
+    - generic [ref=e1455]:
+      - text: second blog author2
+      - button "view" [ref=e1456]
+    - generic [ref=e1458]:
+      - text: third blog author3
+      - button "view" [ref=e1459]
+    - generic [ref=e1461]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1462]
+    - generic [ref=e1464]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1465]
+    - generic [ref=e1467]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1468]
+    - generic [ref=e1470]:
+      - text: first blog author1
+      - button "view" [ref=e1471]
+    - generic [ref=e1473]:
+      - text: second blog author2
+      - button "view" [ref=e1474]
+    - generic [ref=e1476]:
+      - text: third blog author3
+      - button "view" [ref=e1477]
+    - generic [ref=e1479]:
+      - text: a blog created by playwright playwright
+      - button "view" [ref=e1480]
+    - generic [ref=e1482]:
+      - text: blog to be deleted playwright
+      - button "view" [ref=e1483]
+    - generic [ref=e1485]:
+      - text: test blog for delete visibility playwright
+      - button "view" [ref=e1486]
+    - generic [ref=e1488]:
+      - text: first blog author1
+      - button "view" [ref=e1489]
+    - generic [ref=e1491]:
+      - text: second blog author2
+      - button "view" [ref=e1492]
+    - generic [ref=e1494]:
+      - text: third blog author3
+      - button "view" [ref=e1495]
+    - generic [ref=e1497]:
+      - text: first blog author1
+      - button "view" [ref=e1498]
+    - generic [ref=e1500]:
+      - text: second blog author2
+      - button "view" [ref=e1501]
+    - generic [ref=e1503]:
+      - text: third blog author3
+      - button "view" [ref=e1504]
+    - generic [ref=e1506]:
+      - text: first blog author1
+      - button "view" [ref=e1507]
+    - generic [ref=e1509]:
+      - text: second blog author2
+      - button "view" [ref=e1510]
+    - generic [ref=e1512]:
+      - text: third blog author3
+      - button "view" [ref=e1513]
+    - generic [ref=e1515]:
+      - text: first blog author1
+      - button "view" [ref=e1516]
+    - generic [ref=e1518]:
+      - text: second blog author2
+      - button "view" [ref=e1519]
+    - generic [ref=e1521]:
+      - text: third blog author3
+      - button "view" [ref=e1522]
+    - generic [ref=e1524]:
+      - text: first blog author1
+      - button "view" [ref=e1525]
+    - generic [ref=e1527]:
+      - text: second blog author2
+      - button "view" [ref=e1528]
+    - generic [ref=e1530]:
+      - text: third blog author3
+      - button "view" [ref=e1531]
+    - generic [ref=e1533]:
+      - text: first blog author1
+      - button "view" [ref=e1534]
+    - generic [ref=e1536]:
+      - text: second blog author2
+      - button "view" [ref=e1537]
+    - generic [ref=e1539]:
+      - text: third blog author3
+      - button "view" [ref=e1540]
+    - generic [ref=e1542]:
+      - text: first blog author1
+      - button "view" [ref=e1543]
+    - generic [ref=e1545]:
+      - text: second blog author2
+      - button "view" [ref=e1546]
+    - generic [ref=e1548]:
+      - text: third blog author3
+      - button "view" [ref=e1549]
+    - generic [ref=e1551]:
+      - text: first blog author1
+      - button "view" [ref=e1552]
+    - generic [ref=e1554]:
+      - text: second blog author2
+      - button "view" [ref=e1555]
+    - generic [ref=e1557]:
+      - text: third blog author3
+      - button "view" [ref=e1558]
+    - generic [ref=e1560]:
+      - text: first blog author1
+      - button "view" [ref=e1561]
+    - generic [ref=e1563]:
+      - text: second blog author2
+      - button "view" [ref=e1564]
+    - generic [ref=e1566]:
+      - text: third blog author3
+      - button "view" [ref=e1567]
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect, beforeEach, describe } from '@playwright/test'
+  2   | 
+  3   | describe('Blog app', () => {
+  4   | 
+  5   |   beforeEach(async ({ page, request }) => {
+  6   | 
+  7   |     await request.post('http://localhost:3003/api/testing/reset')
+  8   | 
+  9   |     await request.post('http://localhost:3003/api/users', {
+  10  |       data: {
+  11  |         name: 'Test User',
+  12  |         username: 'testuser',
+  13  |         password: 'password'
+  14  |       }
+  15  |     })
+  16  | 
+  17  |     await page.goto('/')
+  18  |   })
+  19  | 
+  20  |   test('Login form is shown', async ({ page }) => {
+  21  | 
+  22  |     await expect(
+  23  |       page.getByText('Log in to application')
+  24  |     ).toBeVisible()
+  25  | 
+  26  |   })
+  27  | 
+  28  |   describe('When logged in', () => {
+  29  | 
+  30  |     beforeEach(async ({ page }) => {
+  31  | 
+  32  |       await page.getByTestId('username').fill('testuser')
+  33  | 
+  34  |       await page.getByTestId('password').fill('password')
+  35  | 
+  36  |       await page.getByRole('button', { name: 'login' }).click()
+  37  |     })
+  38  | 
+  39  |    test('blogs are ordered by likes with most liked first', async ({ page }) => {
+  40  | 
+  41  |   // CREATE BLOG 1
+  42  |   await page.getByRole('button', { name: 'new blog' }).click()
+  43  | 
+  44  |   await page.getByTestId('title').fill('first blog')
+  45  |   await page.getByTestId('author').fill('author1')
+  46  |   await page.getByTestId('url').fill('http://first.com')
+  47  | 
+  48  |   await page.getByRole('button', { name: 'create' }).click()
+  49  | 
+  50  |   // CREATE BLOG 2
+  51  |   await page.getByRole('button', { name: 'new blog' }).click()
+  52  | 
+  53  |   await page.getByTestId('title').fill('second blog')
+  54  |   await page.getByTestId('author').fill('author2')
+  55  |   await page.getByTestId('url').fill('http://second.com')
+  56  | 
+  57  |   await page.getByRole('button', { name: 'create' }).click()
+  58  | 
+  59  |   // CREATE BLOG 3
+  60  |   await page.getByRole('button', { name: 'new blog' }).click()
+  61  | 
+  62  |   await page.getByTestId('title').fill('third blog')
+  63  |   await page.getByTestId('author').fill('author3')
+  64  |   await page.getByTestId('url').fill('http://third.com')
+  65  | 
+  66  |   await page.getByRole('button', { name: 'create' }).click()
+  67  | 
+  68  |   // WAIT BLOGS
+  69  |   await page.waitForTimeout(1000)
+  70  | 
+  71  |   // OPEN ALL BLOGS
+  72  |   const viewButtons = page.getByRole('button', { name: 'view' })
+  73  | 
+  74  |   await viewButtons.nth(0).click()
+  75  |   await viewButtons.nth(1).click()
+  76  |   await viewButtons.nth(2).click()
+  77  | 
+  78  |   // LIKE SECOND BLOG 5 TIMES
+  79  |   const secondBlog = page.locator('[data-testid="blog"]')
+  80  |     .filter({ hasText: 'second blog' })
+  81  | 
+  82  |   for (let i = 0; i < 5; i++) {
+> 83  |     await secondBlog.getByRole('button', { name: 'like' }).click()
+      |                                                            ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  84  |     await page.waitForTimeout(300)
+  85  |   }
+  86  | 
+  87  |   // LIKE THIRD BLOG 3 TIMES
+  88  |   const thirdBlog = page.locator('[data-testid="blog"]')
+  89  |     .filter({ hasText: 'third blog' })
+  90  | 
+  91  |   for (let i = 0; i < 3; i++) {
+  92  |     await thirdBlog.getByRole('button', { name: 'like' }).click()
+  93  |     await page.waitForTimeout(300)
+  94  |   }
+  95  | 
+  96  |   // LIKE FIRST BLOG 1 TIME
+  97  |   const firstBlog = page.locator('[data-testid="blog"]')
+  98  |     .filter({ hasText: 'first blog' })
+  99  | 
+  100 |   await firstBlog.getByRole('button', { name: 'like' }).click()
+  101 | 
+  102 |   await page.waitForTimeout(2000)
+  103 | 
+  104 |   // CHECK ORDER
+  105 |   const blogs = await page.locator('[data-testid="blog"]').allTextContents()
+  106 | 
+  107 |   expect(blogs[0]).toContain('second blog')
+  108 |   expect(blogs[1]).toContain('third blog')
+  109 |   expect(blogs[2]).toContain('first blog')
+  110 | })
+  111 |   })
+  112 | })
+```
